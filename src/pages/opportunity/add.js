@@ -68,8 +68,7 @@ export default function AddOpportunity({ user }) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-
-      const data = (res = await res.json());
+      const data = await res.json(); 
     } catch (error) {}
     console.log(formData);
   };
